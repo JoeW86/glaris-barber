@@ -188,7 +188,7 @@ function ModernTheme() {
           <div className="absolute inset-0 bg-gradient-to-b from-matte-black/60 via-transparent to-matte-black" />
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-4xl">
+        <div className="relative z-10 text-center px-6 max-w-4xl pt-24 md:pt-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -475,7 +475,7 @@ function VintageTheme() {
       {/* Vintage Navigation */}
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? 'bg-wood/95 py-4 border-b-2 border-gold/30' : 'bg-transparent py-8'
+          isScrolled ? 'bg-[#2A1B12]/95 py-4 border-b-2 border-gold/30 shadow-2xl' : 'bg-transparent py-8'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -498,27 +498,27 @@ function VintageTheme() {
       </nav>
 
       {/* Vintage Hero */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden border-b-8 border-wood">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden border-b-8 border-[#1A0F0A]">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1920" 
-            alt="Vintage Barber Shop" 
-            className="w-full h-full object-cover opacity-30 sepia-[0.5] contrast-[1.2]"
+            src="/Images/Background.png" 
+            alt="Vintage Barber Shop Interior" 
+            className="w-full h-full object-cover opacity-40 sepia-[0.2] contrast-[1.1]"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-wood/80 via-transparent to-wood" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#3D2B1F]/90 via-transparent to-[#3D2B1F]" />
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-5xl vintage-border p-12 bg-wood/40 backdrop-blur-sm">
+        <div className="relative z-10 text-center px-6 max-w-5xl vintage-border p-12 bg-[#2A1B12]/60 backdrop-blur-sm shadow-[0_0_50px_rgba(0,0,0,0.5)]">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
             <div className="flex justify-center mb-6">
-              <Award size={48} className="text-gold" />
+              <Award size={48} className="text-gold animate-pulse" />
             </div>
-            <h1 className="text-6xl md:text-9xl font-serif font-black mb-8 leading-tight tracking-tight italic">
+            <h1 className="text-6xl md:text-9xl font-serif font-black mb-8 leading-tight tracking-tight italic text-white drop-shadow-2xl">
               Prestwich’s Premier <br />
               <span className="text-gold">Fine Grooming</span>
             </h1>
@@ -541,8 +541,11 @@ function VintageTheme() {
       </section>
 
       {/* Vintage Social Proof */}
-      <section className="py-32 bg-wood relative">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-32 bg-[#3D2B1F] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')]" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-serif font-black mb-6 italic">Don't Just Take Our Word For It</h2>
             <div className="w-48 h-1 bg-gold mx-auto opacity-50" />
@@ -552,10 +555,10 @@ function VintageTheme() {
             {REVIEWS.map((review, i) => (
               <motion.div 
                 key={i}
-                className="bg-matte-black/40 p-10 rounded-sm border-l-4 border-gold relative italic font-classic text-xl leading-relaxed"
+                className="bg-[#1A0F0A]/60 p-10 rounded-sm border-l-4 border-gold relative italic font-classic text-xl leading-relaxed shadow-xl"
               >
-                <div className="absolute -top-4 -left-4 bg-gold text-wood p-2 rounded-full">
-                  <Star size={20} className="fill-wood" />
+                <div className="absolute -top-4 -left-4 bg-gold text-[#3D2B1F] p-2 rounded-full shadow-lg">
+                  <Star size={20} className="fill-[#3D2B1F]" />
                 </div>
                 <p className="mb-8">"{review.text}"</p>
                 <div className="font-bold text-gold uppercase tracking-widest text-sm not-italic">— {review.name}</div>
@@ -566,9 +569,9 @@ function VintageTheme() {
       </section>
 
       {/* Vintage Services */}
-      <section id="v-services" className="py-32 bg-matte-black relative border-y-4 border-gold/20">
+      <section id="v-services" className="py-32 bg-[#1A0F0A] relative border-y-4 border-gold/20">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-24 border-double border-4 border-gold/30 p-10">
+          <div className="text-center mb-24 border-double border-4 border-gold/30 p-10 bg-[#2A1B12]/40">
             <h2 className="text-5xl md:text-7xl font-serif font-black mb-4 italic">Premium Cuts, No Compromise</h2>
             <p className="text-gold uppercase tracking-[0.4em] text-sm font-bold">The Gentleman's Selection</p>
           </div>
@@ -596,7 +599,7 @@ function VintageTheme() {
       </section>
 
       {/* Vintage Lookbook */}
-      <section id="v-lookbook" className="py-32 bg-wood">
+      <section id="v-lookbook" className="py-32 bg-[#3D2B1F]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-serif font-black mb-4 italic">The Lookbook</h2>
@@ -605,7 +608,7 @@ function VintageTheme() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {LOOKBOOK_IMAGES.map((src, i) => (
-              <div key={i} className="relative group p-4 border-2 border-gold/20 bg-matte-black/20">
+              <div key={i} className="relative group p-4 border-2 border-gold/20 bg-[#1A0F0A]/40 shadow-2xl">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img 
                     src={src} 
@@ -622,11 +625,11 @@ function VintageTheme() {
       </section>
 
       {/* Vintage Location */}
-      <section id="v-location" className="py-32 bg-matte-black">
+      <section id="v-location" className="py-32 bg-[#1A0F0A]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-20">
             <div className="space-y-12">
-              <div className="vintage-border p-10 bg-wood/20">
+              <div className="vintage-border p-10 bg-[#2A1B12]/60 shadow-2xl">
                 <h2 className="text-4xl md:text-6xl font-serif font-black mb-8 italic leading-tight">Open 7 Days. <br />Walk-Ins Welcome.</h2>
                 <p className="text-parchment/70 mb-10 text-xl font-classic italic">Located just off Bury Old Road. Skip the queue by securing your spot online.</p>
                 
@@ -650,22 +653,25 @@ function VintageTheme() {
             </div>
 
             <div className="space-y-12">
-              <div className="bg-wood p-12 rounded-sm border-4 border-double border-gold/30 shadow-2xl">
-                <div className="flex items-center space-x-4 mb-10">
-                  <History className="text-gold" size={32} />
-                  <h3 className="text-3xl font-serif font-bold italic">Trading Hours</h3>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    { day: "Monday – Friday", hours: "09:00 AM – 7:00 PM" },
-                    { day: "Saturday", hours: "09:00 AM – 6:00 PM" },
-                    { day: "Sunday", hours: "10:00 AM – 4:00 PM" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex justify-between items-center border-b border-gold/10 pb-4">
-                      <span className="text-lg font-bold uppercase tracking-widest">{item.day}</span>
-                      <span className="font-mono text-gold">{item.hours}</span>
-                    </div>
-                  ))}
+              <div className="bg-[#3D2B1F] p-12 rounded-sm border-4 border-double border-gold/30 shadow-2xl relative overflow-hidden">
+                <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')]" />
+                <div className="relative z-10">
+                  <div className="flex items-center space-x-4 mb-10">
+                    <History className="text-gold" size={32} />
+                    <h3 className="text-3xl font-serif font-bold italic">Trading Hours</h3>
+                  </div>
+                  <div className="space-y-6">
+                    {[
+                      { day: "Monday – Friday", hours: "09:00 AM – 7:00 PM" },
+                      { day: "Saturday", hours: "09:00 AM – 6:00 PM" },
+                      { day: "Sunday", hours: "10:00 AM – 4:00 PM" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex justify-between items-center border-b border-gold/10 pb-4">
+                        <span className="text-lg font-bold uppercase tracking-widest">{item.day}</span>
+                        <span className="font-mono text-gold">{item.hours}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -674,8 +680,9 @@ function VintageTheme() {
       </section>
 
       {/* Vintage Footer */}
-      <footer className="bg-wood py-20 border-t-8 border-matte-black">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <footer className="bg-[#3D2B1F] py-20 border-t-8 border-[#1A0F0A] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')]" />
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <div className="text-4xl font-serif font-black tracking-[0.3em] mb-8 italic">
             GLARIS <span className="text-gold">BARBER</span>
           </div>
